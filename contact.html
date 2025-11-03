@@ -5,11 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact - Starsgame</title>
 <link rel="stylesheet" href="css/style.css">
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-<div id="particles-js"></div>
-
 <header>
   <div class="container">
     <img src="images/logo.png" alt="Starsgame Logo" class="logo">
@@ -17,7 +15,7 @@
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html" class="active">Contact</a>
-      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="privacy-policy.html">Privacy</a>
     </nav>
     <div class="burger">
       <div></div><div></div><div></div>
@@ -25,31 +23,23 @@
   </div>
 </header>
 
-<section class="contact">
+<section class="contact-section">
   <div class="container">
-    <h2>Contact Us</h2>
-    <p>Have questions or feedback? Send us a message!</p>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
+    <h1>Contact Us</h1>
+    <p>Have questions or suggestions? Reach out to us!</p>
+    <form action="mailto:Starsgame@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
   </div>
 </section>
 
 <footer>
-  <div class="container-footer">
+  <div class="container">
     <p>&copy; 2025 Starsgame. All rights reserved.</p>
-    <div class="social-icons">
-      <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
-      <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
-      <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
-    </div>
   </div>
 </footer>
-
-<script src="js/particles.min.js"></script>
-<script src="js/script.js"></script>
 </body>
 </html>
