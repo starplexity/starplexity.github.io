@@ -3,22 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Starsgame - Home</title>
+<title>Starsgame</title>
 <link rel="stylesheet" href="css/style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<!-- Particle Background -->
-<div id="particles-js"></div>
 
 <header>
   <div class="container">
     <img src="images/logo.png" alt="Starsgame Logo" class="logo">
     <nav>
-      <a href="index.html" class="active">Home</a>
+      <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-      <a href="privacy-policy.html">Privacy</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
     </nav>
     <div class="burger">
       <div></div><div></div><div></div>
@@ -26,26 +24,15 @@
   </div>
 </header>
 
+<!-- Animated Background -->
+<div class="animated-bg"></div>
+
+<!-- Slider -->
 <section class="hero-slider">
   <div class="slides">
-    <div class="slide active" style="background-image: url('images/slider1.png');">
-      <div class="slide-content">
-        <h1>Play Our Exciting Games</h1>
-        <a href="#" class="playstore-btn"><img src="images/playstore.png" alt="Play Store"></a>
-      </div>
-    </div>
-    <div class="slide" style="background-image: url('images/slider2.png');">
-      <div class="slide-content">
-        <h1>Fun for All Ages</h1>
-        <a href="#" class="playstore-btn"><img src="images/playstore.png" alt="Play Store"></a>
-      </div>
-    </div>
-    <div class="slide" style="background-image: url('images/slider3.png');">
-      <div class="slide-content">
-        <h1>Download and Enjoy</h1>
-        <a href="#" class="playstore-btn"><img src="images/playstore.png" alt="Play Store"></a>
-      </div>
-    </div>
+    <div class="slide active"><img src="images/slider1.png" alt="Slide 1"></div>
+    <div class="slide"><img src="images/slider2.png" alt="Slide 2"></div>
+    <div class="slide"><img src="images/slider3.png" alt="Slide 3"></div>
   </div>
   <div class="slider-controls">
     <span class="prev">&#10094;</span>
@@ -53,6 +40,7 @@
   </div>
 </section>
 
+<!-- Games Section -->
 <section class="games">
   <h2>Our Games</h2>
   <div class="game-list">
@@ -80,17 +68,9 @@
 </section>
 
 <footer>
-  <div class="container">
-    <p>&copy; 2025 Starsgame. All rights reserved.</p>
-    <div class="social-icons">
-      <a href="#"><img src="images/social-facebook.png" alt="Facebook"></a>
-      <a href="#"><img src="images/social-twitter.png" alt="Twitter"></a>
-      <a href="#"><img src="images/social-instagram.png" alt="Instagram"></a>
-    </div>
-  </div>
+  <p>&copy; 2025 Starsgame. All rights reserved.</p>
 </footer>
 
-<script src="js/particles.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
