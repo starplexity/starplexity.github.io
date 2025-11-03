@@ -1,26 +1,195 @@
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Roboto',sans-serif;}
-body{background:#f5f7fb;color:#333;}
-.container{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:auto;padding:10px 20px;}
-header{background:#111;color:#fff;position:sticky;top:0;z-index:1000;}
-.logo{width:140px;}
-nav a{color:#fff;text-decoration:none;margin-left:20px;transition:0.3s;}
-nav a:hover{color:#00bcd4;}
-.burger{display:none;flex-direction:column;cursor:pointer;}
-.burger div{width:25px;height:3px;background:#fff;margin:4px 0;transition:0.3s;}
-.hero-slider{position:relative;overflow:hidden;max-height:450px;margin-bottom:50px;}
-.slides .slide{position:absolute;width:100%;height:450px;background-size:cover;background-position:center;opacity:0;transition:opacity 1s ease-in-out;}
-.slides .active{opacity:1;}
-.slider-controls{position:absolute;width:100%;top:50%;display:flex;justify-content:space-between;transform:translateY(-50%);}
-.slider-controls span{cursor:pointer;font-size:2rem;color:#fff;margin:0 20px;user-select:none;transition:0.3s;}
-.slider-controls span:hover{color:#00bcd4;}
-.games{padding:0 20px 50px;}
-.games h2{text-align:center;font-size:2rem;margin-bottom:30px;color:#111;}
-.game-list{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;}
-.game{background:#fff;padding:15px;border-radius:12px;text-align:center;width:220px;box-shadow:0 10px 20px rgba(0,0,0,0.1);transition:transform 0.3s, box-shadow 0.3s;}
-.game:hover{transform:translateY(-10px);box-shadow:0 15px 25px rgba(0,0,0,0.2);}
-.game img{width:100%;border-radius:8px;}
-.playstore-btn img{width:120px;margin-top:10px;transition:transform 0.3s;}
-.playstore-btn img:hover{transform:scale(1.1);}
-.content{max-width:800px;margin:auto;padding:50px 20px;background:#fff;border-radius:12px;box-shadow:0 10px 20px rgba(0,0,0,0.1);margin-bottom:50px;}
-footer{background:#111;color:#fff;text-align:center;padding:15px 0;}
-@media(max-width:768px){nav{display:none;} .burger{display:flex;}}
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Header */
+header {
+  background: #0b0c10;
+  color: white;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+}
+
+.logo {
+  height: 50px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #00bcd4;
+}
+
+/* Burger Menu (Mobile) */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.burger div {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 4px;
+  transition: all 0.3s ease;
+}
+
+/* Hero Slider */
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out, transform 1.5s ease-in-out;
+  transform: scale(1.05);
+}
+
+.slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Slider controls */
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 20px;
+}
+
+.slider-controls span {
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 8px 15px;
+  border-radius: 50%;
+  user-select: none;
+  transition: background 0.3s, transform 0.2s;
+}
+.slider-controls span:hover {
+  background: rgba(255, 255, 255, 0.6);
+  color: black;
+  transform: scale(1.2);
+}
+
+/* Games Section */
+.games {
+  text-align: center;
+  padding: 60px 20px;
+  background: #f9f9f9;
+}
+
+.games h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.game-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.game {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 250px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.game:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.game img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.game h3 {
+  margin: 15px 0;
+  color: #333;
+}
+
+.playstore-btn img {
+  width: 120px;
+  transition: transform 0.3s;
+}
+.playstore-btn img:hover {
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  background: #0b0c10;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #0b0c10;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+  }
+  nav.active {
+    display: flex;
+  }
+  .burger {
+    display: flex;
+  }
+  .game-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
